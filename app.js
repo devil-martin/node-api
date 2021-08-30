@@ -12,11 +12,11 @@ const {
 const app = express();
 app.use(express.json());
 
-app.get("/", getAllData);
-app.post("/", insertData);
-app.get("/:id", getDataById);
-app.put("/:id", updateDataById);
-app.delete("/:id", deleteDataById);
+app.get("/getAllData", getAllData);
+app.post("/insert", insertData);
+app.get("/getById/:id", getDataById);
+app.put("updateByID/:id", updateDataById);
+app.delete("deletById/:id", deleteDataById);
 app.all("*", page404);
 
 app.listen(1234,() => {
