@@ -66,9 +66,7 @@ const insertData = async (req, res) => {
 const page404 = (req, res) => {
 	res.status(404).send(`
     <h1>URL not found!!!</h1>
-    <a href="/api/v1/all">get all data</a> <br>
-    <a href="/api/v1/shops">get all data of Shops</a><br>
-    <a href="/api/v1/items">get all data of Items</a>
+    <a href="/getalldata">get all data</a>
     `);
 };
 
