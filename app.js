@@ -9,6 +9,7 @@ const {
 	getDataById,
 } = require("./controller/controller");
 
+const port = process.env.PORT || 1234;
 const app = express();
 app.use(express.json());
 
@@ -19,7 +20,7 @@ app.put("updateByID/:id", updateDataById);
 app.delete("deletById/:id", deleteDataById);
 app.all("*", page404);
 
-app.listen(1234,() => {
+app.listen(port,() => {
 	ConnectDB;
-	console.log("server is running on http://localhost:1234/");
+	console.log(`server is running on http://localhost:${port}`);
 });
